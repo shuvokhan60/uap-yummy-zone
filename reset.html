@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password - UAP Yummy Zone</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+
+  <div class="reset-box">
+    <img src="images/uap.png" alt="UAP Logo">
+    <h2 class="reset-title">Reset Your Password</h2>
+    <p class="reset-subtitle">Enter a new password and confirm it below to complete your reset.</p>
+
+    <form>
+      <div class="input-group">
+        <input type="password" required placeholder=" " id="new-password">
+        <label for="new-password">New Password</label>
+        <i class="fa fa-lock"></i>
+      </div>
+
+      <div class="input-group">
+        <input type="password" required placeholder=" " id="confirm-password">
+        <label for="confirm-password">Confirm Password</label>
+        <i class="fa fa-lock"></i>
+      </div>
+
+      <button type="button" class="reset-btn" onclick="window.location.href='welcome-uap.html'">Update Password</button>
+
+      <div class="footer-link">
+        <p><a href="welcome-uap.html">← Back to Login</a></p>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
