@@ -1,0 +1,20 @@
+  {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome Page</title>
+
+  <link rel="stylesheet" href="{% static 'welcome_uap.css' %}" />
+</head>
+<body>
+  <div class="container">
+    <img class="uap" src="{% static 'images/uap.png' %}" alt="UaP wait..." />
+    <h1>UAP Yummy Zone</h1>
+
+    <button class="btn" onclick="window.location.href='{% url 'student_stuff' %}'">Login</button>
+    <button class="btn" onclick="window.location.href='{% url 'signup' %}'">Sign Up</button>
+  </div>
+</body>
+</html>
