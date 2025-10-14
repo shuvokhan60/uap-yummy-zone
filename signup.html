@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - UAP Yummy Zone</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+  <div class="signup-box">
+    <img src="images/uap.png" alt="UAP Logo">
+    <h2 class="signup-title">Create an Account</h2>
+
+    <form>
+      <div class="input-group">
+        <input type="text" required placeholder=" " id="fullname">
+        <label for="fullname">Full Name</label>
+        <i class="fa fa-user"></i>
+      </div>
+
+      <div class="input-group">
+        <input type="email" required placeholder=" " id="email">
+        <label for="email">Email</label>
+        <i class="fa fa-envelope"></i>
+      </div>
+
+      <div class="input-group">
+        <input type="text" required placeholder=" " id="username">
+        <label for="username">Username</label>
+        <i class="fa fa-user-circle"></i>
+      </div>
+
+      <div class="input-group">
+        <input type="password" required placeholder=" " id="password">
+        <label for="password">Password</label>
+        <i class="fa fa-lock"></i>
+      </div>
+
+      <div class="input-group">
+        <input type="password" required placeholder=" " id="confirm-password">
+        <label for="confirm-password">Confirm Password</label>
+        <i class="fa fa-lock"></i>
+      </div>
+
+      <button onclick="window.location.href='otp-signup.html';" type="submit" class="signup-btn">Sign Up</button>
+
+      <div class="footer-link">
+        <p>Already have an account? <a href="login.html">Login</a></p>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
