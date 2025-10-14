@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password - UAP Yummy Zone</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="forget.css">
+</head>
+<body>
+
+  <div class="forget-box">
+    <img src="images/uap.png" alt="UAP Logo">
+    <h2 class="forget-title">Forgot Password?</h2>
+    <p class="forget-subtitle">Enter your registered email and we’ll send you an OTP code to reset your password.</p>
+
+    <form>
+      <div class="input-group">
+        <input type="email" required placeholder=" " id="email">
+        <label for="email">Email Address</label>
+        <i class="fa fa-envelope"></i>
+      </div>
+
+      <button type="button" class="forget-btn" onclick="window.location.href='otp.html'">Send OTP</button>
+
+      <div class="footer-link">
+        <p>Remembered your password? <a href="login-student.html">Login</a></p>
+        <p><a href="welcome-uap.html">← Back to Home</a></p>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

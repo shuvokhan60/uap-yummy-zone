@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTP Verification - UAP Yummy Zone</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="otp.css">
+</head>
+<body>
+
+  <div class="otp-box">
+    <img src="images/uap.png" alt="UAP Logo">
+    <h2 class="otp-title">Verify Your Email</h2>
+    <p class="otp-subtitle">Please enter the 6-digit code we’ve sent to your email.</p>
+
+    <form>
+      <div class="otp-inputs">
+        <input type="text" maxlength="1" required>
+        <input type="text" maxlength="1" required>
+        <input type="text" maxlength="1" required>
+        <input type="text" maxlength="1" required>
+        <input type="text" maxlength="1" required>
+        <input type="text" maxlength="1" required>
+      </div>
+
+      <button onclick="window.location.href='student-stuff.html'" type="submit" class="otp-btn">Verify</button>
+
+      <div class="resend">
+        <p>Didn’t receive the code? <a href="#">Resend</a></p>
+      </div>
+
+      <div class="footer-link">
+        <p><a href="signup.html">← Back to Sign Up</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+
+    const inputs = document.querySelectorAll('.otp-inputs input');
+    inputs.forEach((input, index) => {
+      input.addEventListener('input', () => {
+        if (input.value && index < inputs.length - 1) {
+          inputs[index + 1].focus();
+        }
+      });
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && index > 0 && !input.value) {
+          inputs[index - 1].focus();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
