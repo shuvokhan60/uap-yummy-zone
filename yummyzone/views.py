@@ -10,3 +10,9 @@ def signup(request):
 def student_stuff(request):
     return render(request, 'student_stuff.html')
 
+def login_student(request):
+    return render(request, 'login_student.html')
+
+def login_staff(request):
+    return render(request, 'login_staff.html')
+

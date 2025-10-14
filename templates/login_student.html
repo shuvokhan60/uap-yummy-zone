@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UCAM Login - UAP</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <link rel="stylesheet" href="login-student.css">
+  <link rel="stylesheet" href="{% static 'login_student.css' %}">
+
 </head>
 <body>
 
   <div class="login-box">
-    <img src="images/uap.png" alt="UAP Logo">
+    <img src="{% static 'images/uap.png' %}" alt="UAP Logo">
 
     <h1 class="shuvo">UAP Yummy Zone</h1>
     
