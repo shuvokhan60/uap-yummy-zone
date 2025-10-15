@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - UAP Yummy Zone</title>
+    <link rel="stylesheet" href="{% static 'student.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">UAP Yummy Zone</div>
+    <ul>
+        <li><a href="{% url 'student_home' %}"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="{% url 'student_menu' %}"><i class="fa fa-utensils"></i> Menu</a></li>
+        <li><a href="{% url 'student_orders' %}"><i class="fa fa-box"></i> My Orders</a></li>
+        <li><a href="#"><i class="fa fa-star"></i> Loyalty Points</a></li>
+        <li><a href="{% url 'index' %}"><i class="fa fa-sign-out"></i> Logout</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>My Orders</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Order</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.order }}</td>
+                <td>{{ order.date }}</td>
+                <td>{{ order.status }}</td>
+                <td>{{ order.amount }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+</body>
+</html>

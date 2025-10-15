@@ -17,25 +17,28 @@
 
     <h1 class="shuvo">UAP Yummy Zone</h1>
     
-    <form>
-      <div class="input-group">
-        <input type="text" required placeholder=" " id="username">
+    <form method="POST" action="{% url 'login_staff' %}">
+    {% csrf_token %}
+
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <div class="input-group">
+        <input type="text" id="username" name="username" required placeholder=" ">
         <label for="username">Staff Username</label>
         <i class="fa fa-user"></i>
-      </div>
+    </div>
 
-      <div class="input-group">
-        <input type="password" required placeholder=" " id="password">
+    <div class="input-group">
+        <input type="password" id="password" name="password" required placeholder=" ">
         <label for="password">Password</label>
         <i class="fa fa-lock"></i>
-      </div>
+    </div>
 
-      <button onclick="window.location.href='Staff.html'" type="submit" class="login-btn">Login</button>
+    <button type="submit" class="login-btn">Login</button>
+</form>
 
-      <div class="forgot">
-        <a href="forget.html">Forgot Your Password?</a>
-      </div>
-    </form>
   </div>
 
 </body>

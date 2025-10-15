@@ -1,27 +1,34 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Home - UAP Yummy Zone</title>
-  <link rel="stylesheet" href="student.css">
+
+
+  <link rel="stylesheet" href="{% static 'student.css' %}">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">UAP Yummy Zone</div>
-    <ul>
-      <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="#"><i class="fa fa-utensils"></i> Menu</a></li>
-      <li><a href="#"><i class="fa fa-box"></i> My Orders</a></li>
-      <li><a href="#"><i class="fa fa-star"></i> Loyalty Points</a></li>
-      <li><a href="index.html"><i class="fa fa-sign-out"></i> Logout</a></li>
-    </ul>
-  </nav>
+  <div class="logo">UAP Yummy Zone</div>
+  <ul>
+    <li><a href="{% url 'student_home' %}"><i class="fa fa-home"></i> Home</a></li>
+    <li><a href="{% url 'student_menu' %}"><i class="fa fa-utensils"></i> Menu</a></li>
+    <li><a href="{% url 'student_orders' %}"><i class="fa fa-box"></i> My Orders</a></li>
+    <li><a href="#"><i class="fa fa-star"></i> Loyalty Points</a></li>
+    <li><a href="{% url 'index' %}"><i class="fa fa-sign-out"></i> Logout</a></li>
+  </ul>
+</nav>
 
+
+  <!-- Hero Section -->
   <section class="hero">
-    <h1>Welcome, [Student Name] 👋</h1>
+    <h1>Welcome, [Student Name] </h1>
     <p>Track your orders, earn loyalty points, and enjoy meals from the UAP Yummy Zone!</p>
   </section>
 
