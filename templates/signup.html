@@ -7,7 +7,6 @@
   <title>Signup - UAP Yummy Zone</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <link rel="stylesheet" href="{% static 'signup.css' %}">
 </head>
 <body>
@@ -16,42 +15,50 @@
     <img class="uap" src="{% static 'images/uap.png' %}" alt="UaP wait..." />
     <h2 class="signup-title">Create an Account</h2>
 
-    <form>
+    <form method="POST">
+      {% csrf_token %}
+
       <div class="input-group">
-        <input type="text" required placeholder=" " id="fullname">
+        <input type="text" name="fullname" required placeholder=" " id="fullname">
         <label for="fullname">Full Name</label>
         <i class="fa fa-user"></i>
       </div>
 
       <div class="input-group">
-        <input type="email" required placeholder=" " id="email">
+        <input type="email" name="email" required placeholder=" " id="email">
         <label for="email">Email</label>
         <i class="fa fa-envelope"></i>
       </div>
 
       <div class="input-group">
-        <input type="text" required placeholder=" " id="username">
+        <input type="text" name="username" required placeholder=" " id="username">
         <label for="username">Username</label>
         <i class="fa fa-user-circle"></i>
       </div>
 
       <div class="input-group">
-        <input type="password" required placeholder=" " id="password">
-        <label for="password">Password</label>
+        <input type="password" name="password1" required placeholder=" " id="password1">
+        <label for="password1">Password</label>
         <i class="fa fa-lock"></i>
       </div>
 
       <div class="input-group">
-        <input type="password" required placeholder=" " id="confirm-password">
-        <label for="confirm-password">Confirm Password</label>
+        <input type="password" name="password2" required placeholder=" " id="password2">
+        <label for="password2">Confirm Password</label>
         <i class="fa fa-lock"></i>
       </div>
 
-      <button onclick="window.location.href='otp-signup.html';" type="submit" class="signup-btn">Sign Up</button>
+      <button type="submit" class="signup-btn">Sign Up</button>
 
       <div class="footer-link">
-        <p>Already have an account? <a href="login.html">Login</a></p>
+        <p>Already have an account? <a href="{% url 'login_student' %}">Login</a></p>
       </div>
+
+      {% if messages %}
+        {% for msg in messages %}
+          <p style="color: red;">{{ msg }}</p>
+        {% endfor %}
+      {% endif %}
     </form>
   </div>
 

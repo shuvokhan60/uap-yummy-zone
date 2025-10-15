@@ -16,8 +16,9 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views
+<<<<<<< HEAD
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +27,13 @@ urlpatterns = [
 
     path('login_student/', views.login_student, name='login_student'),
     path('login_staff/', views.login_staff, name='login_staff'),
+=======
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('accounts.urls')),
+>>>>>>> b14492c (shuvo)
 
     path('student/home/', views.student_home, name='student_home'),
     path('student/menu/', views.student_menu, name='student_menu'),
