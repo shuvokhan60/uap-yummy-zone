@@ -64,3 +64,20 @@ def student_orders(request):
         {'order': 'Salad', 'date': '2025-10-13', 'status': 'Cancelled', 'amount': '60'},
     ]
     return render(request, 'student_orders.html', {'orders': orders})
+def student_loyalty(request):
+    # Example data for now
+    current_points = 240
+    current_level = "Silver"
+    next_level = "Gold"
+    points_to_next = 260
+    progress_percent = (current_points / 500) * 100  # Example logic
+
+    context = {
+        'current_points': current_points,
+        'current_level': current_level,
+        'next_level': next_level,
+        'points_to_next': points_to_next,
+        'progress_percent': progress_percent,
+    }
+
+    return render(request, 'student_loyalty.html', context)
