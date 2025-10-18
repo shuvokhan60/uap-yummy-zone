@@ -14,8 +14,8 @@ def login_student(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            messages.success(request, "Login successful!")
-            return redirect('student_stuff')
+            #messages.success(request, "Login successful!")
+            return redirect('student_home')
         else:
             messages.error(request, "Invalid username or password!")
     return render(request, 'login_student.html')
@@ -55,3 +55,24 @@ def signup(request):
 
 def student_stuff(request):
     return render(request, 'student_stuff.html')
+
+def menu(request):
+    return render(request, 'menu.html')
+
+def login_staff(request):
+    return render(request, 'login_staff.html')
+
+def login_staff(request):
+
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            #messages.success(request, "Login successful!")
+            return redirect('/admin/')
+        else:
+            messages.error(request, "Invalid username or password!")
+    return render(request, 'login_staff.html')
