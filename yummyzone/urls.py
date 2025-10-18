@@ -25,6 +25,11 @@ urlpatterns = [
     path('student/home/', views.student_home, name='student_home'),
     path('student/menu/', views.student_menu, name='student_menu'),
     path('student/orders/', views.student_orders, name='student_orders'),
+<<<<<<< HEAD
+=======
+    path('student/loyalty/', views.student_loyalty, name='student_loyalty'),
+
+>>>>>>> 506491983a7ab93f2a229ccc69ee6e7e6f94c38c
     path('staff/home/', views.staff_home, name='staff_home'),
     path('student', views.student, name='student'),
 

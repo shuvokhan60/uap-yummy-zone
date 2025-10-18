@@ -1,54 +1,15 @@
-
-from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
-from django.contrib import messages
-from django.contrib.auth import authenticate, login
 
 def index(request):
     return render(request, 'index.html')
 
 # Signup page
 def signup(request):
-    if request.method == "POST":
-        fullname = request.POST.get('fullname')
-        username = request.POST.get('username')
-        email = request.POST.get('email')
-        password1 = request.POST.get('password1')
-        password2 = request.POST.get('password2')
-
-        # Check passwords match
-        if password1 != password2:
-            messages.error(request, "Passwords do not match!")
-            return redirect('signup')
-
-        # Check if username already exists
-        if User.objects.filter(username=username).exists():
-            messages.error(request, "Username already taken!")
-            return redirect('signup')
-
-        # Check if email already exists
-        if User.objects.filter(email=email).exists():
-            messages.error(request, "Email already used!")
-            return redirect('signup')
-
-        # Create new user
-        user = User.objects.create_user(
-            username=username,
-            email=email,
-            password=password1,
-            first_name=fullname
-        )
-        user.save()
-
-        messages.success(request, "Account created successfully! Please log in.")
-        return redirect('login_student')
-
     return render(request, 'signup.html')
 
 # Student Stuff page
 def student_stuff(request):
     return render(request, 'student_stuff.html')
-
 
 # Student Login
 def login_student(request):
@@ -56,16 +17,12 @@ def login_student(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        # Django authentication check
-        user = authenticate(request, username=username, password=password)
-
-        if user is not None:
-            login(request, user)  # Django built-in login
-            messages.success(request, f"Welcome, {user.first_name}!")
-            return redirect('student_home')  # Redirect to home page after login
+        # Example authentication
+        if username == "student" and password == "12345":
+            return redirect('student_home')
         else:
-            messages.error(request, "Invalid username or password!")
-
+            error = "Invalid username or password"
+            return render(request, 'login_student.html', {'error': error})
     return render(request, 'login_student.html')
 
 # Student Home page
@@ -84,10 +41,6 @@ def student_menu(request):
     return render(request, 'menu.html', {'menu_items': menu_items})
 
 # Staff Login
-
-    return render(request, 'login_student.html')
-
-
 def login_staff(request):
     if request.method == "POST":
         username = request.POST.get('username')
@@ -111,10 +64,20 @@ def student_orders(request):
         {'order': 'Salad', 'date': '2025-10-13', 'status': 'Cancelled', 'amount': '60'},
     ]
     return render(request, 'student_orders.html', {'orders': orders})
+def student_loyalty(request):
+    # Example data for now
+    current_points = 240
+    current_level = "Silver"
+    next_level = "Gold"
+    points_to_next = 260
+    progress_percent = (current_points / 500) * 100  # Example logic
 
-def student_stuff(request):
-    return render(request, 'student_stuff.html')
+    context = {
+        'current_points': current_points,
+        'current_level': current_level,
+        'next_level': next_level,
+        'points_to_next': points_to_next,
+        'progress_percent': progress_percent,
+    }
 
-def student(request):
-    return render(request, 'student.html')
-
+    return render(request, 'student_loyalty.html', context)
