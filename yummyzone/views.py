@@ -81,3 +81,6 @@ def student_loyalty(request):
     }
 
     return render(request, 'student_loyalty.html', context)
+
+def student(request):
+    return render(request, 'student.html')
