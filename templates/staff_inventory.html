@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Staff Inventory</title>
+    <link rel="stylesheet" href="{% static 'inventory.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="sidebar">
+    <ul>
+        <li><a href="{% url 'staff_home' %}"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="{% url 'staff_inventory' %}"><i class="fa fa-boxes"></i> Inventory</a></li>
+        <li><a href="{% url 'staff_home' %}"><i class="fa fa-sign-out"></i> Logout</a></li>
+    </ul>
+</nav>
+
+<div class="main-content">
+    <header>
+        <h2>Staff Inventory</h2>
+    </header>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Item/Menu</th>
+                <th>Available Quantity</th>
+                <th>Reorder Level</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in inventory_items %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.quantity }}</td>
+                <td class="{{ item.level_class }}">
+                    {{ item.level }}
+                </td>
+                <td>
+                    <a href="{% url 'update_inventory' item.id %}"><button>Update</button></a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">No items found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

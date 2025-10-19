@@ -14,3 +14,8 @@ def signup(request):
 
 def student_stuff(request):
     return render(request, 'student_stuff.html')
+def login_staff_page(request):
+    return render(request, 'login_staff.html')
+
+def staff_home(request):
+    return render(request, 'staff.html')
