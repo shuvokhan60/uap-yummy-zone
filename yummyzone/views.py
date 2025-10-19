@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-
+from inventory_app.models import InventoryItem
 def index(request):
     return render(request, 'index.html')
 
@@ -81,6 +81,37 @@ def student_loyalty(request):
     }
 
     return render(request, 'student_loyalty.html', context)
+<<<<<<< HEAD
+def staff_inventory(request):
+    # Fetch all inventory items from the database
+    inventory_items = InventoryItem.objects.all()
+
+    # Render the inventory page
+    return render(request, 'staff_inventory.html', {'inventory_items': inventory_items})
+
+def update_inventory(request, item_id):
+    try:
+        item = InventoryItem.objects.get(id=item_id)
+    except InventoryItem.DoesNotExist:
+        return redirect('staff_inventory')
+
+    if request.method == 'POST':
+        new_quantity = request.POST.get('quantity')
+        if new_quantity.isdigit():
+            item.quantity = int(new_quantity)
+            item.save()
+        return redirect('staff_inventory')
+
+    return render(request, 'update_inventory.html', {'item': item})
+from django.shortcuts import render
+
+def staff_menu(request):
+
+    menu_items = InventoryItem.objects.all()
+
+    return render(request, 'staff_menu.html', {'menu_items': menu_items})
+=======
 
 def student(request):
     return render(request, 'student.html')
+>>>>>>> 90e5e3b3051c9b9fe5b2d582673e2771463fad8c

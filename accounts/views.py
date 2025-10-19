@@ -55,6 +55,13 @@ def signup(request):
 
 def student_stuff(request):
     return render(request, 'student_stuff.html')
+<<<<<<< HEAD
+def login_staff_page(request):
+    return render(request, 'login_staff.html')
+
+def staff_home(request):
+    return render(request, 'staff.html')
+=======
 
 def menu(request):
     return render(request, 'menu.html')
@@ -76,3 +83,4 @@ def login_staff(request):
         else:
             messages.error(request, "Invalid username or password!")
     return render(request, 'login_staff.html')
+>>>>>>> 90e5e3b3051c9b9fe5b2d582673e2771463fad8c

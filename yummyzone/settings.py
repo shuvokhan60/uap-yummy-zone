@@ -9,6 +9,11 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
     'accounts',
+<<<<<<< HEAD
+    'inventory_app',
+    'yummyzone',
+=======
+>>>>>>> 90e5e3b3051c9b9fe5b2d582673e2771463fad8c
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,7 +78,18 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+<<<<<<< HEAD
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
+
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+=======
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login/'
+>>>>>>> 90e5e3b3051c9b9fe5b2d582673e2771463fad8c
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

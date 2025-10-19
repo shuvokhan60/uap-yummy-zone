@@ -4,21 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Orders - UAP Yummy Zone</title>
-    <link rel="stylesheet" href="{% static 'student.css' %}">
+    <title>Student Orders</title>
+    <link rel="stylesheet" href="{% static 'css/student_orders.css' %}">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f7f7f7;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+        }
+        th {
+            background: #6a11cb;
+            color: #fff;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background: #f3f3f3;
+        }
+        tr:hover {
+            background: #e0d4f7;
+        }
+    </style>
 </head>
 <body>
-<nav class="navbar">
-    <div class="logo">UAP Yummy Zone</div>
-    <ul>
-        <li><a href="{% url 'student_home' %}">Home</a></li>
-        <li><a href="{% url 'student_menu' %}">Menu</a></li>
-        <li><a href="{% url 'student_orders' %}">My Orders</a></li>
-        <li><a href="{% url 'student_loyalty' %}">Loyalty Points</a></li>
-        <li><a href="{% url 'index' %}">Logout</a></li>
-    </ul>
-</nav>
-<section class="hero">
     <h1>My Orders</h1>
     <table>
         <thead>
@@ -26,7 +50,7 @@
                 <th>Order</th>
                 <th>Date</th>
                 <th>Status</th>
-                <th>Amount</th>
+                <th>Amount (৳)</th>
             </tr>
         </thead>
         <tbody>
@@ -37,9 +61,12 @@
                 <td>{{ order.status }}</td>
                 <td>{{ order.amount }}</td>
             </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">No orders found.</td>
+            </tr>
             {% endfor %}
         </tbody>
     </table>
-</section>
 </body>
 </html>

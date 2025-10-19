@@ -14,8 +14,28 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
 from django.contrib import admin
+<<<<<<< HEAD
+from django.urls import path
+from . import views  # project views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
+    path('signup/', views.signup, name='signup'),
+    path('login_student/', views.login_student, name='login_student'),
+    path('student_stuff/', views.student_stuff, name='student_stuff'),
+    path('student_home/', views.student_home, name='student_home'),
+    path('student_menu/', views.student_menu, name='student_menu'),
+    path('student_orders/', views.student_orders, name='student_orders'),
+    path('student_loyalty/', views.student_loyalty, name='student_loyalty'),
+
+    path('login_staff/', views.login_staff, name='login_staff'),
+    path('staff_home/', views.staff_home, name='staff_home'),
+    path('staff_inventory/', views.staff_inventory, name='staff_inventory'),
+    path('update_inventory/<int:item_id>/', views.update_inventory, name='update_inventory'),
+    path('staff_menu/', views.staff_menu, name='staff_menu'),
+=======
 from django.urls import path, include
 from . import views
 
@@ -30,4 +50,6 @@ urlpatterns = [
     path('student', views.student, name='student'),
 
 
+>>>>>>> 90e5e3b3051c9b9fe5b2d582673e2771463fad8c
 ]
+
