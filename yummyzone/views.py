@@ -81,6 +81,7 @@ def student_loyalty(request):
     }
 
     return render(request, 'student_loyalty.html', context)
+<<<<<<< HEAD
 def staff_inventory(request):
     # Fetch all inventory items from the database
     inventory_items = InventoryItem.objects.all()
@@ -109,3 +110,8 @@ def staff_menu(request):
     menu_items = InventoryItem.objects.all()
 
     return render(request, 'staff_menu.html', {'menu_items': menu_items})
+=======
+
+def student(request):
+    return render(request, 'student.html')
+>>>>>>> 90e5e3b3051c9b9fe5b2d582673e2771463fad8c

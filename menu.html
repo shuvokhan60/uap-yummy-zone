@@ -1,41 +1,41 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu - UAP Yummy Zone</title>
-  <link rel="stylesheet" href="{% static 'student.css' %}">
+  <title>Student Home - UAP Yummy Zone</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'menu.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- ===== Navbar ===== -->
   <nav class="navbar">
     <div class="logo">UAP Yummy Zone</div>
     <ul>
       <li><a href="{% url 'student_home' %}"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="{% url 'student_menu' %}"><i class="fa fa-utensils"></i> Menu</a></li>
-      <li><a href="#"><i class="fa fa-box"></i> My Orders</a></li>
-      <li><a href="#"><i class="fa fa-star"></i> Loyalty Points</a></li>
-      <li><a href="{% url 'index' %}"><i class="fa fa-sign-out"></i> Logout</a></li>
+      <li><a href="{% url 'menu' %}"><i class="fa fa-utensils"></i> Menu</a></li>
+      <li><a href="{% url 'my_orders' %}"><i class="fa fa-box"></i> My Orders</a></li>
+      <li><a href="{% url 'loyalty_points' %}"><i class="fa fa-star"></i> Loyalty Points</a></li>
+      <li><a href="{% url 'logout_page' %}"><i class="fa fa-sign-out"></i> Logout</a></li>
     </ul>
   </nav>
 
-  <!-- Hero -->
+  <!-- ===== Hero Section ===== -->
   <section class="hero">
-    <h1>Our Menu 🍽️</h1>
-    <p>Check out our delicious offerings!</p>
-
-    <div class="menu-list">
-      {% for item in menu_items %}
-        <div class="menu-item">
-          <h3>{{ item.name }}</h3>
-          <p>Price: {{ item.price }} BDT</p>
-        </div>
-      {% endfor %}
-    </div>
+    <h1>Welcome, {{ student_name }} 👋</h1>
+    <p>Track your orders, earn loyalty points, and enjoy delicious meals from UAP Yummy Zone!</p>
+    <button class="btn" onclick="window.location.href='{% url 'menu' %}'">Explore Menu</button>
   </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 UAP Yummy Zone | All Rights Reserved</p>
+  </footer>
 
 </body>
 </html>

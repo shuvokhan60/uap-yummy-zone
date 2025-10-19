@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="54465a97-1bdd-4ff2-aeee-eeaba5223ab5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/inventory_app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory_app/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory_app/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory_app/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory_app/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory_app/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory_app/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory_app/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory_app/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff_inventory.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/staff_inventory.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/staff_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/update_inventory.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/update_inventory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/staff.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/staff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/student_orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/student_orders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/student_stuff.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/student_stuff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyzone/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/yummyzone/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyzone/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yummyzone/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyzone/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yummyzone/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;23101048-mysha&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/shuvokhan60/uap-yummy-zone.git&quot;,
+    &quot;accountId&quot;: &quot;0350c78f-7d79-494b-a66e-01bd0c3e6305&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="34CfG6ut0GR6YSvl1atcJmiDvHR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Microsoft Windows/OneDrive/Desktop/uap-yummy-zone/templates&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Microsoft Windows\OneDrive\Desktop\uap-yummy-zone\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Microsoft Windows\OneDrive\Desktop\uap-yummy-zone\accounts\accounts" />
+      <recent name="C:\Users\Microsoft Windows\OneDrive\Desktop\uap-yummy-zone\accounts\migrations" />
+      <recent name="C:\Users\Microsoft Windows\OneDrive\Desktop\uap-yummy-zone\inventory_app" />
+      <recent name="C:\Users\Microsoft Windows\OneDrive\Desktop\uap-yummy-zone\inventory_app\migrations" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-ce6832f46686-7b97d883f26b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.25557.178" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54465a97-1bdd-4ff2-aeee-eeaba5223ab5" name="Changes" comment="" />
+      <created>1760722376904</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760722376904</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/yummyzone/views.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
