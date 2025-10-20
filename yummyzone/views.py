@@ -103,4 +103,3 @@ def staff_menu(request):
 
 def student(request):
     return render(request, 'student.html')
-

@@ -66,8 +66,6 @@ def staff_home(request):
 def menu(request):
     return render(request, 'student_menu.html')
 
-def login_staff(request):
-    return render(request, 'login_staff.html')
 
 def login_staff(request):
 
@@ -79,8 +77,7 @@ def login_staff(request):
         if user is not None:
             login(request, user)
             #messages.success(request, "Login successful!")
-            return redirect('/admin/')
+            return redirect('staff_home')
         else:
             messages.error(request, "Invalid username or password!")
     return render(request, 'login_staff.html')
-

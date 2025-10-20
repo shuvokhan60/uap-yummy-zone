@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}UAP Yummy Zone{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'staff menu.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #32b69a, #00a9ff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #007a9e;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        footer {
+            background: #007a9e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .content {
+            margin: 30px auto;
+            max-width: 900px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍽️ UAP Yummy Zone</h1>
+    </header>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+
+</body>
+</html>

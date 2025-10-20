@@ -2,7 +2,11 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import InventoryItem
 
 def staff_home(request):
-    return render(request, 'staff.html')
+    context = {
+        'staff_name': request.user.first_name or request.user.username
+    }
+    return render(request, 'staff.html', context)
+
 
 def staff_inventory(request):
     inventory_items = InventoryItem.objects.all()
