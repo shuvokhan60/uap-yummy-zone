@@ -21,15 +21,20 @@
     </ul>
   </nav>
 
-  <section class="hero">
+   <section class="hero">
     <h1>Our Menu 🍽️</h1>
     <p>Check out our delicious offerings!</p>
 
     <div class="menu-list">
-      {% for item in menu_items %}
+      {% for item in foods %}
         <div class="menu-item">
+          {% if item.image %}
+            <img src="{{ item.image.url }}" width="220" height="150" alt="{{ item.name }}"><br>
+          {% endif %}
           <h3>{{ item.name }}</h3>
-          <p>Price: {{ item.price }} BDT</p>
+          <p>{{ item.description }}</p>
+          <p><strong>Price:</strong> {{ item.price }} BDT</p>
+          <a href="{% url 'order_food' item.id %}" class="order-btn">Order Now</a>
         </div>
       {% endfor %}
     </div>

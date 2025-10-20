@@ -29,17 +29,6 @@ def login_student(request):
 def student_home(request):
     return render(request, 'student.html')
 
-# Student Menu page
-def student_menu(request):
-    # Example menu items
-    menu_items = [
-        {'name': 'Burger', 'price': 120},
-        {'name': 'Pizza', 'price': 200},
-        {'name': 'Pasta', 'price': 200},
-        {'name': 'Salad', 'price': 60},
-    ]
-    return render(request, 'menu.html', {'menu_items': menu_items})
-
 # Staff Login
 def login_staff(request):
     if request.method == "POST":

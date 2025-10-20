@@ -64,7 +64,7 @@ def staff_home(request):
 
 
 def menu(request):
-    return render(request, 'menu.html')
+    return render(request, 'student_menu.html')
 
 def login_staff(request):
     return render(request, 'login_staff.html')

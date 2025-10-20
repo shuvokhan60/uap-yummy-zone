@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Orders</title>
-    <link rel="stylesheet" href="{% static 'css/student_orders.css' %}">
+    <title>My Orders</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -40,6 +39,8 @@
         tr:hover {
             background: #e0d4f7;
         }
+        .paid { color: green; font-weight: 600; }
+        .unpaid { color: red; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -47,7 +48,7 @@
     <table>
         <thead>
             <tr>
-                <th>Order</th>
+                <th>Food Item</th>
                 <th>Date</th>
                 <th>Status</th>
                 <th>Amount (৳)</th>
@@ -56,10 +57,17 @@
         <tbody>
             {% for order in orders %}
             <tr>
-                <td>{{ order.order }}</td>
-                <td>{{ order.date }}</td>
-                <td>{{ order.status }}</td>
-                <td>{{ order.amount }}</td>
+                <td>{{ order.food_item.name }}</td>
+                <td>{{ order.created_at|date:"M d, Y h:i A" }}</td>
+
+                <td>
+                    {% if order.is_paid %}
+                        <span class="paid">Paid</span>
+                    {% else %}
+                        <span class="unpaid">Unpaid</span>
+                    {% endif %}
+                </td>
+                <td>{{ order.total_price }}</td>
             </tr>
             {% empty %}
             <tr>
