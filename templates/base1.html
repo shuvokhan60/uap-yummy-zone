@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}UAP Yummy Zone - Staff{% endblock %}</title>
+
+    <!-- Optional External CSS -->
+    <link rel="stylesheet" href="{% static 'staff_menu.css' %}">
+
+    <style>
+        /* ========== BASIC BODY STYLE ========== */
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(to right, #2ecc71, #00a9ff);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            background: #007a9e;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* ========== NAVIGATION BAR ========== */
+        nav {
+            background: #0091c2;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 12px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #ffe600;
+            text-decoration: underline;
+        }
+
+        /* ========== MAIN CONTENT ========== */
+        .content {
+            background: white;
+            border-radius: 15px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 25px 30px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: #007a9e;
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .content {
+                width: 90%;
+                margin: 20px auto;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+        🍽️ UAP Yummy Zone — Staff Panel
+    </header>
+
+    <!-- ========== NAV BAR ========== -->
+    <nav>
+        <a href="{% url 'staff_home' %}">🏠 Home</a>
+        <a href="{% url 'manage_orders' %}">📦 Manage Orders</a>
+        <a href="{% url 'staff_inventory' %}">📋 Inventory</a>
+        <a href="{% url 'staff_menu' %}">🍔 Menu Manager</a>
+        <a href="{% url 'logout' %}">🚪 Logout</a>
+    </nav>
+
+    <!-- ========== PAGE CONTENT ========== -->
+    <div class="content">
+        {% block content %}
+        <!-- Each page’s custom content will load here -->
+        {% endblock %}
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        © 2025 UAP Yummy Zone | Developed by Antu & Shuvo 💚
+    </footer>
+
+</body>
+</html>
