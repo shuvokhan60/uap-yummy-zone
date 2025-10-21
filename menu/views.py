@@ -79,6 +79,7 @@ def edit_food(request, food_id):
         food.name = request.POST.get('name')
         food.description = request.POST.get('description')
         food.price = request.POST.get('price')
+        food.quantity = request.POST.get('quantity', 0)
         food.available = 'available' in request.POST
 
         if 'image' in request.FILES:
@@ -118,3 +119,17 @@ def update_order_status(request, order_id):
     order.save()
     messages.info(request, f"🔄 {order.food_item.name} order status updated!")
     return redirect('manage_orders')
+@login_required
+def update_quantity(request, food_id):
+    food = get_object_or_404(FoodItem, id=food_id)
+
+    if request.method == 'POST':
+        new_quantity = request.POST.get('quantity')
+        if new_quantity.isdigit():
+            food.quantity = int(new_quantity)
+            food.save()
+            messages.success(request, f"✅ Quantity for {food.name} updated to {food.quantity}.")
+        else:
+            messages.error(request, "❌ Invalid quantity value.")
+
+    return redirect('staff_menu')

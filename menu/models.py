@@ -10,6 +10,7 @@ class FoodItem(models.Model):
     price = models.DecimalField(max_digits=20, decimal_places=2, default=Decimal('0.00'))
     image = models.ImageField(upload_to='menu_images/', blank=True, null=True)
     available = models.BooleanField(default=True)
+    quantity = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.name

@@ -34,6 +34,7 @@
           <h3>{{ item.name }}</h3>
           <p>{{ item.description }}</p>
           <p><strong>Price:</strong> {{ item.price }} BDT</p>
+            <p><strong>Available Quantity:</strong> {{ item.quantity }}</p>
           <a href="{% url 'order_food' item.id %}" class="order-btn">Order Now</a>
         </div>
       {% endfor %}

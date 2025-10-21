@@ -5,30 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54465a97-1bdd-4ff2-aeee-eeaba5223ab5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/inventory_app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory_app/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory_app/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory_app/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory_app/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory_app/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory_app/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory_app/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory_app/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staff_inventory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staff_menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/staff_inventory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/staff_menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/update_inventory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/update_inventory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/staff.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/staff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/student_orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/student_orders.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/student_stuff.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/student_stuff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyzone/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/yummyzone/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyzone/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yummyzone/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyzone/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yummyzone/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit_food.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit_food.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/staff_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/staff_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/student_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/student_menu.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

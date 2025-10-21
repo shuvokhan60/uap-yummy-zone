@@ -30,6 +30,13 @@
         </div><br>
 
         <div>
+        <label>Quantity:</label>
+  <input type="number" name="quantity" value="{{ food.quantity }}" min="0" required><br>
+             </div><br>
+
+
+
+        <div>
             <label>Available:</label>
             <input type="checkbox" name="available" {% if food.available %}checked{% endif %}>
         </div><br>
