@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
- {% load static %}
+{% load static %}
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Staff Home - UAP Yummy Zone</title>
 
-<link rel="stylesheet" href="{% static 'staff.css' %}">
+  <link rel="stylesheet" href="{% static 'staff.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ছোট লাল বৃত্ত (notification badge) */
+    .badge {
+      background: red;
+      color: white;
+      border-radius: 50%;
+      padding: 3px 7px;
+      font-size: 12px;
+      position: relative;
+      top: -10px;
+      left: -5px;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,14 +31,23 @@
       <li><a href="{% url 'manage_orders' %}"><i class="fa fa-tasks"></i> Manage Orders</a></li>
       <li><a href="{% url 'staff_inventory' %}"><i class="fa fa-boxes"></i> Inventory</a></li>
       <li><a href="{% url 'staff_menu' %}"><i class="fa fa-utensils"></i> Menu Manager</a></li>
-      <li><a href="#"><i class="fa fa-bell"></i> Notifications</a></li>
+
+      <!-- 🔔 Notification -->
+      <li>
+        <a href="#">
+          <i class="fa fa-bell"></i> Notifications
+          {% if low_stock_count > 0 %}
+            <span class="badge">{{ low_stock_count }}</span>
+          {% endif %}
+        </a>
+      </li>
+
       <li><a href="index.html"><i class="fa fa-sign-out"></i> Logout</a></li>
     </ul>
   </nav>
 
   <section class="hero">
     <h1>Welcome, {{ staff_name }} 👨‍🍳</h1>
-
     <p>Manage orders, update menus, check inventory, and keep UAP Yummy Zone running smoothly.</p>
   </section>
 
