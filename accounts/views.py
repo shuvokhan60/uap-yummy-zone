@@ -20,8 +20,6 @@ def login_student(request):
             messages.error(request, "Invalid username or password!")
     return render(request, 'login_student.html')
 
-def logout_page(request):
-    return render(request, 'logout.html')
 
 def signup(request):
     if request.method == 'POST':
@@ -60,7 +58,7 @@ def login_staff_page(request):
     return render(request, 'login_staff.html')
 
 def staff_home(request):
-    return render(request, 'staff.html')
+    return render(request,  'staff_home.html')
 
 
 def menu(request):
@@ -81,3 +79,7 @@ def login_staff(request):
         else:
             messages.error(request, "Invalid username or password!")
     return render(request, 'login_staff.html')
+
+def logout_view(request):
+    logout(request)  # session clear
+    return redirect('index')
