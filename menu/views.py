@@ -4,9 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .models import FoodItem, Order
 
 
-# ==========================
-# 🎓 STUDENT SIDE
-# ==========================
+
 
 def student_menu(request):
     foods = FoodItem.objects.filter(available=True)
@@ -41,9 +39,7 @@ def make_payment(request, order_id):
     return redirect('student_orders')
 
 
-# ==========================
-# 👨‍🍳 STAFF SIDE (MENU MANAGEMENT)
-# ==========================
+
 
 @login_required
 def staff_menu(request):
@@ -100,13 +96,11 @@ def delete_food(request, food_id):
     return redirect('staff_menu')
 
 
-# ==========================
-# 🧾 STAFF SIDE (MANAGE ORDERS)
-# ==========================
+
 
 @login_required
 def manage_orders(request):
-    # সব অর্ডার দেখাবে, নতুন থেকে পুরানো ক্রমে
+   
     orders = Order.objects.select_related('user', 'food_item').order_by('-created_at')
     return render(request, 'manage_orders.html', {'orders': orders})
 
