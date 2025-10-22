@@ -107,7 +107,7 @@ def manage_orders(request):
 
 @login_required
 def update_order_status(request, order_id):
-    # অর্ডারের পেমেন্ট স্ট্যাটাস টগল করবে
+   
     order = get_object_or_404(Order, id=order_id)
     order.is_paid = not order.is_paid
     order.save()
